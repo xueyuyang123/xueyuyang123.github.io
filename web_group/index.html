@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <!-- 成功訊息 -->
+        <?php if (!empty($success)): ?>
+            <div class="success-message"><?= $success ?></div>
+        <?php endif; ?>
+        
+        <!-- 錯誤訊息 -->
+        <?php if (!empty($errors)): ?>
+            <div class="error-message">
+                <?php foreach ($errors as $error): ?>
+                    <p><?= $error ?></p>
+                <?php endforeach; ?>
+            </div>
+        <?php endif; ?>
+        
+        <h2>Login</h2>
+        <form action="login.php" method="POST">
+            <input type="hidden" name="login" value="1">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" 
+                    placeholder="Enter your username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" 
+                       placeholder="Enter your password" required>
+            </div>
+            <button class="btn" type="submit">Login</button>
+            <button class="btn register-btn" type="button" onclick="location.href='register.php'">Register a New Account</button>
+        </form>
+    </div>
+</body>
+</html>

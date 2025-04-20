@@ -1,0 +1,121 @@
+/* Vote page specific styles */
+.vote-section {
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.poll-image-container {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.poll-image {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.vote-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+
+.options-list {
+    margin-bottom: 25px;
+}
+
+.option-item {
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.option-item:hover {
+    background-color: rgba(66, 133, 244, 0.05);
+    border-color: var(--primary-color);
+}
+
+.option-item input[type="radio"],
+.option-item input[type="checkbox"] {
+    margin-right: 10px;
+    accent-color: var(--primary-color);
+}
+
+.option-item label {
+    cursor: pointer;
+    user-select: none;
+}
+
+.already-voted {
+    text-align: center;
+    padding: 30px;
+}
+
+.already-voted p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn-results {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 24px;
+    display: inline-block;
+}
+
+.btn-results:hover {
+    background-color: #3367d6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .poll-image {
+        max-height: 200px;
+    }
+    
+    .option-item {
+        padding: 10px;
+    }
+}
+
+.vote-now-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Optional hover effect */
+.vote-now-btn:hover {
+    background-color: #2d9246; 
+    transform: translateY(-1px); 
+}
+.question-container {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.other-text-container {
+    margin-top: 10px;
+    margin-left: 30px;
+    display: none;
+}
+.other-text-container input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 14px;
+}
